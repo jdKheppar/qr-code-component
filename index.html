@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>QR code component</title>
+
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: hsl(212, 45%, 89%);
+        font-family: "Outfit", sans-serif;
+      }
+      .main-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .second-container {
+        margin-top: 10vh;
+        margin-bottom: 5vh;
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        width: 22%;
+        padding: 20px;
+        border-radius: 20px;
+      }
+      .third-container {
+        padding: 7px;
+      }
+      .third-container h3 {
+        font-weight: bold;
+      }
+
+      .image {
+        width: 100%;
+      }
+      .paragraph-center {
+        text-align: center;
+        font-size: 15px;
+      }
+      /* For Mobile size screens */
+      @media only screen and (max-width: 500px) {
+        .second-container {
+          width: 95%;
+          padding: 20px;
+          border-radius: 20px;
+        }
+      }
+      /* For Tablet Size Screens */
+      @media only screen and (max-width: 1000px) and (min-width: 501px) {
+        .second-container {
+          width: 50%;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="main-container">
+      <div class="second-container">
+        <img class="image" src="./images/image-qr-code.png" alt="qr" />
+        <div class="third-container">
+          <h3>Improve your front-end skills by building projects</h3>
+          <p class="paragraph-center">
+            Scan the QR code to visit Frontend Mentor and take your coding skils
+            to the next level!
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

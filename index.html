@@ -24,72 +24,65 @@
       *::before,
       *::after {
         box-sizing: border-box;
-      }
-      body {
         margin: 0;
         padding: 0;
+      }
+      body {
         background-color: hsl(212, 45%, 89%);
         font-family: "Outfit", sans-serif;
-      }
-      .main-container {
+        min-height: 100vh;
         display: flex;
         align-items: center;
         justify-content: center;
       }
 
-      .second-container {
-        margin-top: 10vh;
-        margin-bottom: 5vh;
+      .container {
         display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
         background-color: white;
-        width: 22%;
+        width: 310px;
         padding: 20px;
         border-radius: 20px;
       }
-      .third-container {
-        padding: 7px;
-      }
-      .third-container h3 {
-        font-weight: bold;
-      }
-
-      .image {
+      .plain-image {
         width: 100%;
       }
+      .second-container {
+        padding: 17px;
+      }
+      .second-container h3 {
+        text-align: center;
+        font-weight: 700;
+      }
       .paragraph-center {
+        margin-top: 15px;
         text-align: center;
         font-size: 15px;
       }
       /* For Mobile size screens */
-      @media only screen and (max-width: 500px) {
-        .second-container {
-          width: 95%;
+      @media only screen and (max-width: 375px) {
+        .container {
+          width: 100%;
           padding: 20px;
           border-radius: 20px;
-        }
-      }
-      /* For Tablet Size Screens */
-      @media only screen and (max-width: 1000px) and (min-width: 501px) {
-        .second-container {
-          width: 50%;
+          margin: 5%;
         }
       }
     </style>
   </head>
 
   <body>
-    <div class="main-container">
-      <div class="second-container">
-        <img class="image" src="./images/image-qr-code.png" alt="qr" />
-        <div class="third-container">
-          <h3>Improve your front-end skills by building projects</h3>
-          <p class="paragraph-center">
-            Scan the QR code to visit Frontend Mentor and take your coding skils
-            to the next level!
-          </p>
-        </div>
-      </div>
+    <div class="container">
+      <img class="plain-image" src="./images/image-qr-code.png" alt="qr" />
+      <section class="second-container">
+        <h3>Improve your front-end skills by building projects</h3>
+        <p class="paragraph-center">
+          Scan the QR code to visit Frontend Mentor and take your coding skils
+          to the next level!
+        </p>
+      </section>
     </div>
   </body>
 </html>
